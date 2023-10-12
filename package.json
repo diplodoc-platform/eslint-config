@@ -1,6 +1,6 @@
 {
   "name": "@diplodoc/eslint-config",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "diplodoc ESLint config, following our styleguide",
   "keywords": [
     "eslint",
@@ -11,6 +11,14 @@
   "files": [
     "prettier.js"
   ],
+  "dependencies": {
+    "@babel/core": "^7.23.2",
+    "@babel/eslint-parser": "^7.22.15",
+    "@typescript-eslint/eslint-plugin": "6.7.5",
+    "@typescript-eslint/parser": "6.7.5",
+    "eslint": "^8.51.0",
+    "eslint-plugin-security": "1.7.1"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/diplodoc/eslint-config"
