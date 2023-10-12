@@ -1,6 +1,6 @@
 {
   "name": "@diplodoc/eslint-config",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "diplodoc ESLint config, following our styleguide",
   "keywords": [
     "eslint",
