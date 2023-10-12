@@ -147,6 +147,12 @@ module.exports = {
             '@typescript-eslint/no-use-before-define': [1, {'functions': false}],
             'no-useless-constructor': 0,
             '@typescript-eslint/no-useless-constructor': 2,
+            '@typescript-eslint/naming-convention': [
+                'error',
+                { 'selector': 'class', 'format': ['PascalCase'] },
+                { 'selector': 'interface', 'format': ['PascalCase'] },
+                { 'selector': 'typeAlias', 'format': ['PascalCase'] }
+            ],
             '@typescript-eslint/class-name-casing': 2,
             '@typescript-eslint/member-delimiter-style': 2,
             '@typescript-eslint/member-ordering': [2, {
