@@ -153,7 +153,6 @@ module.exports = {
                 { 'selector': 'interface', 'format': ['PascalCase'] },
                 { 'selector': 'typeAlias', 'format': ['PascalCase'] }
             ],
-            '@typescript-eslint/class-name-casing': 2,
             '@typescript-eslint/member-delimiter-style': 2,
             '@typescript-eslint/member-ordering': [2, {
                 'default': [
