@@ -1,0 +1,22 @@
+{
+  "name": "@diplodoc/eslint-config",
+  "version": "1.0.0",
+  "description": "diplodoc ESLint config, following our styleguide",
+  "keywords": [
+    "eslint",
+    "config"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "prettier.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diplodoc/eslint-config"
+  },
+  "bugs": {
+    "url": "https://github.com/diplodoc/eslint-config/issues"
+  },
+  "homepage": "https://github.com/diplodoc/eslint-config#readme"
+}
