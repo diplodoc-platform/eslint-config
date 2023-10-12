@@ -1,27 +1,28 @@
 module.exports = {
-    'extends': ['eslint:recommended'],
-    'plugins': ['@typescript-eslint'],
-    'parser': '@typescript-eslint/parser',
-    'parserOptions': {
-        'ecmaVersion': 2019
+    extends: ['eslint:recommended'],
+    plugins: ['@typescript-eslint'],
+    parser: '@typescript-eslint/parser',
+    parserOptions: {
+        ecmaVersion: 2019,
     },
-    'env': {
-        'es6': true,
-        'node': true
+    env: {
+        es6: true,
+        node: true,
     },
-    'rules': {
+    rules: {
         'no-empty': 'off',
         'valid-jsdoc': ['warn', {
-            'requireParamDescription': false,
-            'requireReturnDescription': false
+            requireParamDescription: false,
+            requireReturnDescription: false,
         }],
+        complexity: 'warn',
+        curly: 'error',
+        eqeqeq: ['warn', 'always'],
         'array-callback-return': 'error',
         'block-scoped-var': 'warn',
-        'complexity': 'warn',
         'consistent-return': 'warn',
-        'curly': 'error',
         'dot-location': ['error', 'property'],
-        'eqeqeq': ['warn', 'always'],
+        'quote-props': ['error', 'as-needed'],
         'guard-for-in': 'error',
         'no-caller': 'error',
         'no-div-regex': 'warn',
@@ -56,34 +57,33 @@ module.exports = {
         'no-useless-concat': 'error',
         'no-void': 'error',
         'no-with': 'error',
-        'radix': 'warn',
+        radix: 'warn',
         'wrap-iife': ['error', 'inside'],
-        'strict': 'warn',
         'no-label-var': 'error',
         'no-shadow': 'warn',
         'no-shadow-restricted-names': 'error',
         'no-undef-init': 'error',
-        'no-use-before-define': ['warn', {'functions': false}],
+        'no-use-before-define': ['warn', {functions: false}],
         'callback-return': 'warn',
         'handle-callback-err': 'warn',
         'no-new-require': 'error',
         'no-path-concat': 'warn',
         'array-bracket-spacing': ['error', 'never'],
         'block-spacing': ['error', 'always'],
-        'brace-style': ['error', '1tbs', {'allowSingleLine': true}],
-        'camelcase': ['error', {'properties': 'never'}],
+        'brace-style': ['error', '1tbs', {allowSingleLine: true}],
+        camelcase: ['error', {properties: 'never'}],
         'comma-dangle': ['error', 'always-multiline'],
-        'comma-spacing': ['error', {'before': false, 'after': true}],
+        'comma-spacing': ['error', {before: false, after: true}],
         'comma-style': ['error', 'last'],
         'computed-property-spacing': ['error', 'never'],
         'eol-last': 'warn',
         'func-call-spacing': ['error', 'never'],
-        'indent': ['error', 4, {'SwitchCase': 1}],
-        'key-spacing': ['error', {'beforeColon': false, 'afterColon': true}],
-        'keyword-spacing': ['error', {'before': true, 'after': true}],
+        indent: ['error', 4, {SwitchCase: 1}],
+        'key-spacing': ['error', {beforeColon: false, afterColon: true}],
+        'keyword-spacing': ['error', {before: true, after: true}],
         'linebreak-style': ['error', 'unix'],
-        'max-depth': ['warn', {'maximum': 5}],
-        'max-len': ['warn', {'code': 120, 'ignoreUrls': true}],
+        'max-depth': ['warn', {maximum: 5}],
+        'max-len': ['warn', {code: 120, ignoreUrls: true}],
         'new-cap': 'error',
         'new-parens': 'error',
         'no-array-constructor': 'warn',
@@ -98,17 +98,17 @@ module.exports = {
         'no-unneeded-ternary': 'error',
         'no-whitespace-before-property': 'error',
         'object-curly-spacing': ['error', 'never'],
-        'quotes': ['error', 'single'],
-        'semi': ['error', 'always'],
+        quotes: ['error', 'single'],
+        semi: ['error', 'always'],
         'semi-spacing': 'error',
         'space-before-blocks': 'error',
-        'space-before-function-paren': ['error', {'anonymous': 'always', 'named': 'never'}],
+        'space-before-function-paren': ['error', {anonymous: 'always', named: 'never'}],
         'space-in-parens': ['error', 'never'],
         'space-infix-ops': 'error',
         'space-unary-ops': 'error',
         'arrow-parens': 'error',
-        'arrow-spacing': ['error', {'before': true, 'after': true}],
-        'generator-star-spacing': ['error', {'before': false, 'after': true}],
+        'arrow-spacing': ['error', {before: true, after: true}],
+        'generator-star-spacing': ['error', {before: false, after: true}],
         'no-duplicate-imports': 'error',
         'no-useless-constructor': 'error',
         'no-var': 'error',
@@ -119,44 +119,45 @@ module.exports = {
         'require-atomic-updates': 'off',
         'require-yield': 'warn',
         'template-curly-spacing': ['error', 'never'],
-        'yield-star-spacing': ['error', {'before': false, 'after': true}]
+        'yield-star-spacing': ['error', {before: false, after: true}],
     },
-    'overrides': [{
-        'files': ['*.ts', '*.tsx'],
-        'parser': '@typescript-eslint/parser',
-        'parserOptions': {
-            'sourceType': 'module'
+    overrides: [{
+        files: ['*.ts', '*.tsx'],
+        parser: '@typescript-eslint/parser',
+        parserOptions: {
+            sourceType: 'module',
+            project: ['./tsconfig.json'],
         },
-        'plugins': [
-            '@typescript-eslint'
+        plugins: [
+            '@typescript-eslint',
         ],
-        'rules': {
-            'strict': 'off',
+        rules: {
+            strict: 'off',
             'no-undef': 'off',
             'no-dupe-class-members': 'off',
             'valid-jsdoc': ['warn', {
-                'requireReturnType': false,
-                'requireParamType': false,
-                'requireParamDescription': false,
-                'requireReturnDescription': false
+                requireReturnType: false,
+                requireParamType: false,
+                requireParamDescription: false,
+                requireReturnDescription: false,
             }],
-            'semi': 'off',
+            semi: 'off',
             '@typescript-eslint/semi': 'error',
             'no-unused-vars': 'off',
             '@typescript-eslint/no-unused-vars': 'error',
             'no-use-before-define': 'off',
-            '@typescript-eslint/no-use-before-define': ['warn', {'functions': false}],
+            '@typescript-eslint/no-use-before-define': ['warn', {functions: false}],
             'no-useless-constructor': 'off',
             '@typescript-eslint/no-useless-constructor': 'error',
             '@typescript-eslint/naming-convention': [
                 'error',
-                { 'selector': 'class', 'format': ['PascalCase'] },
-                { 'selector': 'interface', 'format': ['PascalCase'] },
-                { 'selector': 'typeAlias', 'format': ['PascalCase'] }
+                {selector: 'class', format: ['PascalCase']},
+                {selector: 'interface', format: ['PascalCase']},
+                {selector: 'typeAlias', format: ['PascalCase']},
             ],
             '@typescript-eslint/member-delimiter-style': 'error',
             '@typescript-eslint/member-ordering': ['error', {
-                'default': [
+                default: [
                     'public-static-field',
                     'protected-static-field',
                     'private-static-field',
@@ -173,10 +174,10 @@ module.exports = {
 
                     'public-instance-method',
                     'protected-instance-method',
-                    'private-instance-method'
-                ]
+                    'private-instance-method',
+                ],
             }],
-            '@typescript-eslint/explicit-member-accessibility': ['error', {'accessibility': 'no-public'}],
+            '@typescript-eslint/explicit-member-accessibility': ['error', {accessibility: 'no-public'}],
             '@typescript-eslint/consistent-type-assertions': 'error',
             '@typescript-eslint/no-array-constructor': 'error',
             '@typescript-eslint/no-explicit-any': 'warn',
@@ -187,14 +188,14 @@ module.exports = {
             '@typescript-eslint/triple-slash-reference': 'error',
             '@typescript-eslint/prefer-namespace-keyword': 'error',
             '@typescript-eslint/type-annotation-spacing': ['error', {
-                'before': true,
-                'after': true,
-                'overrides': {
-                    'colon': {
-                        'before': false
-                    }
-                }
-            }]
-        }
-    }]
-}
+                before: true,
+                after: true,
+                overrides: {
+                    colon: {
+                        before: false,
+                    },
+                },
+            }],
+        },
+    }],
+};
