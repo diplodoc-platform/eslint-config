@@ -1,6 +1,17 @@
+const match = (value, match) => value && value.match(match);
+
 module.exports = {
-    extends: ['eslint:recommended', '@gravity-ui/eslint-config'],
-    env: {
-        node: true,
+    root: true,
+    extends: [
+        '@gravity-ui/eslint-config',
+        match(process.env.ESLINT_ENV,  'client') && '@gravity-ui/eslint-config/client',
+        process.env.npm_command && '@gravity-ui/eslint-config/prettier',
+    ].filter(Boolean),
+    parserOptions: {
+        project: ["./tsconfig.json"]
+    },
+    rules: {
+        'no-param-reassign': 'off',
+        '@typescript-eslint/no-shadow': 'off',
     },
 };
