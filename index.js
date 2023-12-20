@@ -11,6 +11,9 @@ module.exports = {
         project: ["./tsconfig.json"]
     },
     rules: {
+        'callback-return': 'off',
+        'consistent-return': 'off',
+        'no-implicit-globals': 'off',
         'no-param-reassign': 'off',
         '@typescript-eslint/no-shadow': 'off',
     },
