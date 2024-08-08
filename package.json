@@ -11,6 +11,9 @@
   "files": [
     "prettier.js"
   ],
+  "scripts": {
+    "test": "exit 0"
+  },
   "dependencies": {
     "@gravity-ui/eslint-config": "^3.1.1",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
