@@ -1,5 +1,7 @@
 # @diplodoc/eslint-config
 
+[![NPM version](https://img.shields.io/npm/v/@diplodoc/eslint-config.svg?style=flat)](https://www.npmjs.org/package/@diplodoc/eslint-config)
+
 ## Install
 
 ```
