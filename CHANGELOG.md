@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.17](https://github.com/diplodoc-platform/eslint-config/compare/v1.0.16...v1.0.17) (2024-08-08)
+
+
+### Bug Fixes
+
+* Add badge ([70a6418](https://github.com/diplodoc-platform/eslint-config/commit/70a641817447b0b26422713f5983f5543e0bf45d))
+
 ## 1.0.16 (2024-08-08)
 
 
