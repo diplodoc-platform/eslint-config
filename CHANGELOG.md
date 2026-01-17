@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.18](https://github.com/diplodoc-platform/eslint-config/compare/v1.0.17...v1.0.18) (2025-08-11)
+
+
+### Bug Fixes
+
+* update version actions, node 22 ([d0ef7a1](https://github.com/diplodoc-platform/eslint-config/commit/d0ef7a1256e2321f284999a9c6f0787f1040a65d))
+
 ## [1.0.17](https://github.com/diplodoc-platform/eslint-config/compare/v1.0.16...v1.0.17) (2024-08-08)
 
 
